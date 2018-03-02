@@ -1,0 +1,6 @@
+/.svn
+/deployment
+/.mendix-cache
+/.classpath
+/.project
+/node_modules
