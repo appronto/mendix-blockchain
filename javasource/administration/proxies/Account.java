@@ -19,7 +19,6 @@ public class Account extends system.proxies.User
 		FullName("FullName"),
 		Email("Email"),
 		IsLocalUser("IsLocalUser"),
-		PublicKey("PublicKey"),
 		Name("Name"),
 		Password("Password"),
 		LastLogin("LastLogin"),
@@ -196,42 +195,6 @@ public class Account extends system.proxies.User
 	public final void setIsLocalUser(com.mendix.systemwideinterfaces.core.IContext context, java.lang.Boolean islocaluser)
 	{
 		getMendixObject().setValue(context, MemberNames.IsLocalUser.toString(), islocaluser);
-	}
-
-	/**
-	 * @return value of PublicKey
-	 */
-	public final java.lang.String getPublicKey()
-	{
-		return getPublicKey(getContext());
-	}
-
-	/**
-	 * @param context
-	 * @return value of PublicKey
-	 */
-	public final java.lang.String getPublicKey(com.mendix.systemwideinterfaces.core.IContext context)
-	{
-		return (java.lang.String) getMendixObject().getValue(context, MemberNames.PublicKey.toString());
-	}
-
-	/**
-	 * Set value of PublicKey
-	 * @param publickey
-	 */
-	public final void setPublicKey(java.lang.String publickey)
-	{
-		setPublicKey(getContext(), publickey);
-	}
-
-	/**
-	 * Set value of PublicKey
-	 * @param context
-	 * @param publickey
-	 */
-	public final void setPublicKey(com.mendix.systemwideinterfaces.core.IContext context, java.lang.String publickey)
-	{
-		getMendixObject().setValue(context, MemberNames.PublicKey.toString(), publickey);
 	}
 
 	@Override

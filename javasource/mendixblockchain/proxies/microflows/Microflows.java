@@ -131,19 +131,6 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static void aT_Remine(IContext context, mendixblockchain.proxies.Block _block)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			params.put("Block", _block == null ? null : _block.getMendixObject());
-			Core.execute(context, "MendixBlockchain.AT_Remine", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
 	public static void aT_SaveKeysForSession(IContext context, mendixblockchain.proxies.UserKeyPair _userKeyPair)
 	{
 		try
@@ -170,32 +157,6 @@ public class Microflows
 			throw new MendixRuntimeException(e);
 		}
 	}
-	public static void aT_ValidateBlock(IContext context, mendixblockchain.proxies.Block _block)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			params.put("Block", _block == null ? null : _block.getMendixObject());
-			Core.execute(context, "MendixBlockchain.AT_ValidateBlock", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
-	public static void aT_ValidateTransaction(IContext context, mendixblockchain.proxies.Transaction _transaction)
-	{
-		try
-		{
-			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
-			params.put("Transaction", _transaction == null ? null : _transaction.getMendixObject());
-			Core.execute(context, "MendixBlockchain.AT_ValidateTransaction", params);
-		}
-		catch (CoreException e)
-		{
-			throw new MendixRuntimeException(e);
-		}
-	}
 	public static system.proxies.User dS_CurrentUser(IContext context)
 	{
 		try
@@ -216,6 +177,32 @@ public class Microflows
 			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
 			IMendixObject result = (IMendixObject)Core.execute(context, "MendixBlockchain.DS_GetKeyPair", params);
 			return result == null ? null : mendixblockchain.proxies.UserKeyPair.initialize(context, result);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void oCh_Transaction_Validate(IContext context, mendixblockchain.proxies.Transaction _transaction)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("Transaction", _transaction == null ? null : _transaction.getMendixObject());
+			Core.execute(context, "MendixBlockchain.OCh_Transaction_Validate", params);
+		}
+		catch (CoreException e)
+		{
+			throw new MendixRuntimeException(e);
+		}
+	}
+	public static void oCh_ValidateBlock(IContext context, mendixblockchain.proxies.Block _block)
+	{
+		try
+		{
+			Map<java.lang.String, Object> params = new HashMap<java.lang.String, Object>();
+			params.put("Block", _block == null ? null : _block.getMendixObject());
+			Core.execute(context, "MendixBlockchain.OCh_ValidateBlock", params);
 		}
 		catch (CoreException e)
 		{

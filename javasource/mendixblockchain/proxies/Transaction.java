@@ -72,8 +72,8 @@ public class Transaction
 	 */
 	public static mendixblockchain.proxies.Transaction initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
-		if (com.mendix.core.Core.isSubClassOf("MyGenuineCertificatesBlockchain.Certificate", mendixObject.getType()))
-			return mygenuinecertificatesblockchain.proxies.Certificate.initialize(context, mendixObject);
+		if (com.mendix.core.Core.isSubClassOf("MyGenuineCertificatesBlockchain.GenuineCertificate", mendixObject.getType()))
+			return mygenuinecertificatesblockchain.proxies.GenuineCertificate.initialize(context, mendixObject);
 
 		return new mendixblockchain.proxies.Transaction(context, mendixObject);
 	}
